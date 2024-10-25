@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Relaxing Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #e3f2fd;
+    padding: 20px;
+}
+
+h1 {
+    color: #42a5f5;
+}
+
+.game-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+
+.game-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.game-btn {
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-btn:hover {
+    background-color: #1e88e5;
+}
+
+#tic-tac-toe-board {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#tic-tac-toe-board td {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #90caf9;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #1e88e5;
+}
+#memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+}
+
+.memory-card {
+    background-color: #42a5f5;
+    color: white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.memory-card.flipped {
+    background-color: white;
+    color: #42a5f5;
+}
+
+    </style>
+    <h1>Mind Relaxing Games</h1>
+    <div class="game-container">
+        <h2>Rock, Paper, Scissors</h2>
+        <div class="game-section">
+            <button class="game-btn" onclick="playRPS('rock')">Rock</button>
+            <button class="game-btn" onclick="playRPS('paper')">Paper</button>
+            <button class="game-btn" onclick="playRPS('scissors')">Scissors</button>
+        </div>
+        <p id="rps-result"></p>
+    </div>
+
+    <div class="game-container">
+        <h2>Tic-Tac-Toe</h2>
+        <table id="tic-tac-toe-board">
+            <tr>
+                <td onclick="playTicTacToe(0)"></td>
+                <td onclick="playTicTacToe(1)"></td>
+                <td onclick="playTicTacToe(2)"></td>
+            </tr>
+            <tr>
+                <td onclick="playTicTacToe(3)"></td>
+                <td onclick="playTicTacToe(4)"></td>
+                <td onclick="playTicTacToe(5)"></td>
+            </tr>
+            <tr>
+                <td onclick="playTicTacToe(6)"></td>
+                <td onclick="playTicTacToe(7)"></td>
+                <td onclick="playTicTacToe(8)"></td>
+            </tr>
+        </table>
+        <p id="tic-tac-toe-result"></p>
+    </div>
+
+    <!-- Add more games below... -->
+    <div class="game-container">
+        <h2>Number Guessing Game</h2>
+        <div class="game-section">
+            <input type="number" id="guess-input" placeholder="Enter your guess" />
+            <button class="game-btn" onclick="playNumberGuessing()">Submit</button>
+        </div>
+        <p id="guess-result"></p>
+    </div>
+    <div class="game-container">
+        <h2>Memory Card Flip</h2>
+        <div id="memory-game" class="game-section">
+            <!-- Cards will be dynamically generated here -->
+        </div>
+        <p id="memory-result"></p>
+    </div>
+    
+    <div class="game-container">
+        <h2>Word Unscramble Game</h2>
+        <div class="game-section">
+            <p id="scrambled-word"></p>
+            <input type="text" id="unscramble-input" placeholder="Unscramble the word" />
+            <button class="game-btn" onclick="submitUnscramble()">Submit</button>
+        </div>
+        <p id="unscramble-result"></p>
+    </div>
+    
+    <script src="games.js"></script>
+</body>
+</html>

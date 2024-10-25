@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="quotes.js" defer></script>
+    <style>
+        body {
+            background-color: #e3f2fd;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .quote-container {
+            margin: 50px auto;
+            max-width: 700px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            font-size: 1.5em;
+        }
+
+        .quote-container p {
+            font-style: italic;
+            color: #616161;
+        }
+
+        .new-quote-btn {
+            background-color: #42a5f5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .new-quote-btn:hover {
+            background-color: #1e88e5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quotes for Positivity</h1>
+    <div class="quote-container">
+        <p id="quoteText">"The best way to predict the future is to create it."</p>
+        <button class="new-quote-btn" onclick="generateQuote()">Show Another Quote</button>
+    </div>
+
+</body>
+</html>

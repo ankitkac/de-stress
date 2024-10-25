@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation & Sounds - De-stress Yourself</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Container */
+.meditation-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    background-color: transparent;
+    padding: 20px;
+    color: #54c5fa;
+    border-radius: 2rem;
+    
+}
+
+.header h1 {
+    font-size: 2.5em;
+}
+
+/* Sound Section */
+.sound-section {
+    margin: 20px 0;
+}
+
+.sound-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.sounds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+}
+
+.sound-item {
+    background-color: #fff;
+    border: 2px solid #54c5fa;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.sound-item:hover {
+    transform: scale(1.05);
+}
+
+.sound-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 1.4rem;
+}
+
+.sound-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Meditation Section */
+.meditation-section {
+    margin-top: 30px;
+}
+
+.meditation-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.meditation-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.meditation-btn {
+    padding: 10px 20px;
+    background-color:  #54c5fa;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.meditation-btn:hover {
+    background-color: #15dd61;
+}
+
+/* Timer */
+.timer {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #6c63ff;
+}
+
+/* Footer */
+.footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+    </style>
+    <div class="meditation-container">
+        <header class="header">
+            <h1>Meditation & Sounds</h1>
+        </header>
+
+        <section class="sound-section">
+            <h2>Select a Calming Sound</h2>
+            <div class="sounds-grid">
+                <div class="sound-item" onclick="playSound('rain')">
+                    <img src="images/forest.jpg" alt="Rain Sound">
+                    <p>Birds</p>
+                </div>
+                <div class="sound-item" onclick="playSound('ocean')">
+                    <img src="images/burning_wood.jpg" alt="Ocean Sound">
+                    <p>Wood burning</p>
+                </div>
+                <div class="sound-item" onclick="playSound('forest')">
+                    <img src="images/night_cyprus_sea.jpg" alt="Forest Sound">
+                    <p>night cyprus sea</p>
+                </div>
+                <div class="sound-item" onclick="playSound('birds')">
+                    <img src="images/water.jpg" alt="Birds Sound">
+                    <p>water</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="meditation-section">
+            <h2>Guided Meditation</h2>
+            <p>Take a few deep breaths, close your eyes, and focus on your breathing. Let go of stress as you inhale deeply and exhale slowly.</p>
+            <button class="meditation-btn" onclick="startTimer(5)">Start 5-minute Meditation</button>
+            <p id="timer" class="timer"></p>
+        </section>
+    </div>
+
+    <audio id="rain-sound" src="forest-163012.mp3" preload="auto"></audio>
+    <audio id="ocean-sound" src="firewood-burning-sound-179862.mp3" preload="auto"></audio>
+    <audio id="forest-sound" src="night-cyprus-sea-53355.mp3" preload="auto"></audio>
+    <audio id="birds-sound" src="water.mp3" preload="auto"></audio>
+
+    <script src="medition.js"></script>
+</body>
+</html>

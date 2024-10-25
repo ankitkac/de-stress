@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Affirmations</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="affirmations.js" defer></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #e0f2f1;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .affirmation-container {
+            display: inline-block;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .affirmation-text {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Positive Affirmations</h1>
+    <div class="affirmation-container">
+        <div class="affirmation-text" id="affirmationText">"You are capable of amazing things."</div>
+        <button onclick="generateAffirmation()">Get New Affirmation</button>
+    </div>
+
+</body>
+</html>

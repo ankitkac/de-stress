@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F4F8;
+    color: #333;
+    padding: 20px;
+}
+
+/* General container for sections */
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Section: Stress Tracker */
+.tracker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tracker h1 {
+    font-size: 24px;
+}
+
+.tracker span {
+    background-color: #e0e7ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #536DFE;
+}
+
+.tracker-graph {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.graph-bar {
+    width: 10px;
+    height: 100px;
+    background-color: #E0E0E0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.graph-bar.active {
+    background-color: #536DFE;
+    height: 120px;
+}
+
+.graph-bar.active span {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Section: Recent Activities */
+.recent-activities h2 {
+    margin-bottom: 15px;
+}
+
+.activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.activity:last-child {
+    border-bottom: none;
+}
+
+.activity-info span:first-child {
+    font-weight: bold;
+}
+
+.activity-status span {
+    background-color: #E0E7FF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #536DFE;
+}
+
+/* Section: Connect */
+.connect h2 {
+    margin-bottom: 15px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.person img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.person span {
+    margin-right: 10px;
+}
+
+.person button {
+    background-color: #536DFE;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Section: Progress */
+.progress-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.progress-complete {
+    height: 100%;
+    background-color: #536DFE;
+    border-radius: 5px;
+}
+
+/* ------------------- RESPONSIVE STYLES ------------------- */
+
+/* Mobile Devices (<= 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .tracker-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tracker-graph {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .graph-bar {
+        width: 15px;
+        height: 80px;
+    }
+
+    .activity, .person {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-tracker {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-bar {
+        margin-left: 0;
+    }
+}
+
+/* Tablet Devices (>= 601px and <= 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .tracker h1 {
+        font-size: 20px;
+    }
+
+    .tracker-graph {
+        justify-content: space-between;
+    }
+
+    .activity, .person {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .progress-bar {
+        margin-left: 15px;
+    }
+}
+
+/* Large Screens (>= 1025px) */
+@media (min-width: 1025px) {
+    body {
+        padding: 40px;
+    }
+
+    .tracker h1 {
+        font-size: 28px;
+    }
+
+    .graph-bar {
+        width: 15px;
+        height: 150px;
+    }
+
+    .person img {
+        width: 50px;
+        height: 50px;
+    }
+}

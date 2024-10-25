@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="journal.js" defer></script>
+    <style>
+        body {
+            background-color: #f3e5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .journal-container {
+            margin: 50px auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #5e35b1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            background-color: #4527a0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Daily Journal</h1>
+    <div class="journal-container">
+        <textarea id="journalEntry" placeholder="Write down your thoughts..."></textarea>
+        <button onclick="saveEntry()">Save Journal Entry</button>
+    </div>
+
+</body>
+</html>

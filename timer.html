@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgraded Modern Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/1178684/pexels-photo-1178684.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+.container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Timer Display Styling */
+#timer-display {
+    font-size: 4em;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+/* Input Styling */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.controls input[type="number"] {
+    width: 80px;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.controls input[type="number"]:focus {
+    border-color: #4caf50;
+}
+
+/* Button Styling */
+.primary-btn, .secondary-btn {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.primary-btn {
+    background: linear-gradient(45deg, #4caf50, #66bb6a);
+    color: #fff;
+    margin-right: 10px;
+    outline: none;
+}
+
+.primary-btn:hover {
+    background: linear-gradient(45deg, #43a047, #388e3c);
+}
+
+.secondary-btn {
+    background: #9e9e9e;
+    color: #fff;
+    margin-right: 10px;
+    outline: none;
+}
+
+.secondary-btn:hover {
+    background: #757575;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #timer-display {
+        font-size: 3em;
+    }
+
+    .controls input[type="number"] {
+        width: 60px;
+    }
+
+    .primary-btn, .secondary-btn {
+        font-size: 1em;
+    }
+}
+
+    </style>
+    <div class="container">
+        <h1>Countdown Timer</h1>
+        
+        <div id="timer-display">
+            <span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+        
+        <div class="controls">
+            <input type="number" id="set-minutes" placeholder="Minutes" min="0" max="60">
+            <input type="number" id="set-seconds" placeholder="Seconds" min="0" max="59">
+            <button id="set-timer-btn" class="primary-btn">Set Timer</button>
+        </div>
+        
+        <div class="buttons">
+            <button id="start-btn" class="primary-btn">Start</button>
+            <button id="pause-btn" class="secondary-btn">Pause</button>
+            <button id="reset-btn" class="secondary-btn">Reset</button>
+        </div>
+    </div>
+
+    <script src="timer.js"></script>
+</body>
+</html>
